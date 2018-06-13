@@ -18,7 +18,7 @@
 
   <header id="header">
 
-    <img id="header-img" src="images/placeholder_150x100.png" alt="logo" />
+    <img id="header-img" src="images/beans-logo.png" alt="logo" />
 
     <nav id="nav-bar">
       <ul>
@@ -38,44 +38,75 @@
 
   <main>
 
-    <h1>Page Title</h1>
+    <h1>Coffee</h1>
 
     <section id="what-is-it">
       <h2>What is it?</h2>
-      <div id="video">
-      </div>
+      <p>Coffee is the lifeblood of civilisation. It is one of the most popular beverages in the world and, for many, nothing
+        compares to the aroma of freshly ground coffee first thing in the morning.</p>
+      <p>It comes from beans, from a plant. The
+        <em>Coffea</em> plant.</p>
+      <p>To see how exactly the beans are turned into this wonderful brown liquid, watch this informative, yet brief, explainer
+        video:
+      </p>
+      <iframe id="video" height="300" src="https://www.youtube-nocookie.com/embed/Y3XF3uL7NKY?rel=0&amp;controls=0&amp;showinfo=0"
+        frameborder="0" allowfullscreen></iframe>
     </section>
 
     <section id="testimonials">
       <h2>User Testimonials</h2>
       <div id="flex-container">
-        <div>
+        <div class="user-testimonial">
           <div class="circle-wrapper">
-            <img class="circle-img" src="images/placeholder_150x100.png" alt="" />
+            <img class="circle-img" src="images/kate.jpg" alt="" />
           </div>
-          Person 1
+          <div>
+            <h4>Kate W.</h4>
+            <p>
+              <em>"With enough coffee, I feel as though all things are possible. Many of them are highly unlikely, but they
+                <strong>are</strong>
+                possible."
+              </em>
+            </p>
+          </div>
         </div>
-        <div>
+        <div class="user-testimonial">
           <div class="circle-wrapper">
-            <img class="circle-img" src="images/placeholder_150x100.png" alt="" />
+            <img class="circle-img" src="images/phillip.jpg" alt="Futurama Fry" />
           </div>
-          Person 2
+          <div>
+            <h4>Phillip F.</h4>
+            <p>
+              <em>"I have seen things. Awful things. Empty coffee cup things."</em>
+            </p>
+          </div>
         </div>
-        <div>
+        <div class="user-testimonial">
           <div class="circle-wrapper">
-            <img class="circle-img" src="images/placeholder_150x100.png" alt="" />
+            <img class="circle-img" src="images/george.jpg" alt="George Clooney" />
           </div>
-          Person 3
+          <div>
+            <h4>George C.</h4>
+            <p>
+              <em>"Not to get too technical, but, according to chemistry,
+                <strong>coffee is a solution</strong>."</em>
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="where-to-buy">
       <h2>Where to Buy</h2>
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input type="email" id="email" placeholder="Enter your email address">
-        <input id="submit" type="submit" value="Sign up!"></input>
-      </form>
+      <div>
+        <p>For a free list of hand-picked, artisanal suppliers of the absolute best, 100% genuine, organic, certified fair-trade,
+          traditionally-roasted, home-brewed, single-origin coffee, sign up here:
+        </p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input type="email" id="email" placeholder="Enter your email address">
+          <input id="submit" type="submit" value="Sign up!"></input>
+        </form>
+      </div>
     </section>
 
   </main>

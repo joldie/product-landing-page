@@ -1,6 +1,6 @@
 /* Global styling */
 
-@import url('https://fonts.googleapis.com/css?family=...');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Merriweather');
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +8,20 @@
 }
 
 :root {
-  --main-bg-color: #eee;
-  --alt-bg-color: #aaa;
-  --main-txt-color: #333;
-  --alt-txt-color: #eee;
+  /* Variable declarations */
+  --main-bg-color: #fff4e6;
+  --alt-bg-color: #553c34;
+  --main-txt-color: #3c2f2f;
+  --alt-txt-color: #fff4e6;
+  --impact-color: rgb(138, 46, 38);
   --fixed-header-height: 100px;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--alt-txt-color);
   color: var(--main-txt-color);
-  font-family: sans-serif;
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 2px;
   line-height: 1.6;
   min-width: 320px;
 }
@@ -36,6 +39,7 @@ header {
   text-align: justify;
   height: var(--fixed-header-height);
   width: 100%;
+  z-index: 1000;
 }
 
 header::after {
@@ -51,6 +55,11 @@ nav {
   display: inline-block;
 }
 
+#header-img {
+  height: 70px;
+  margin: 15px;
+}
+
 #nav-bar ul {
   list-style: none;
   display: flex;
@@ -58,6 +67,7 @@ nav {
 
 #nav-bar ul li {
   padding: 10px 20px;
+  color: var(--alt-txt-color);
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -66,6 +76,20 @@ main {
   padding-top: calc(var(--fixed-header-height) + 20px);
   margin-bottom: 50px;
   text-align: center;
+}
+
+h1 {
+  color: var(--impact-color);
+  font-family: 'Bungee Shade', cursive;
+  font-size: 15vw;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--impact-color);
+  width: 90vw;
+  margin: 0 auto;
 }
 
 section {
@@ -77,12 +101,16 @@ section h2 {
   margin-bottom: 20px;
 }
 
+#what-is-it p {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
 #video {
-  background-color: var(--alt-bg-color);
-  height: 300px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  /* Video aspect ratio = 560/315 = 1.778 */
+  width: 90vw;
+  height: 45vw;
+  margin: 10px auto;
 }
 
 #flex-container {
@@ -90,17 +118,33 @@ section h2 {
   justify-content: space-evenly;
 }
 
-.circle-wrapper {
+.user-testimonial {
   width: 25vw;
-  height: 25vw;
   max-width: 200px;
+}
+
+.circle-wrapper {
+  width: 100%;
+  height: 25vw;
   max-height: 200px;
+  margin-bottom: 15px;
 }
 
 .circle-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  border: 1px solid var(--main-bg-color);
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+#where-to-buy div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#form {
+  margin: 10px;
 }
 
 input[type="email"] {
@@ -119,15 +163,17 @@ input[type="submit"] {
   border-radius: 4px;
   font-size: 1em;
   color: var(--alt-txt-color);
-  background-color: var(--alt-bg-color);
+  background-color: var(--impact-color);
 }
 
 footer {
-  width: 90%;
+  width: 100%;
+  background-color: var(--alt-bg-color);
+  color: var(--alt-txt-color);
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  border-top: 1px solid var(--alt-bg-color);
+  font-size: 80%;
 }
 
 footer a {
@@ -139,12 +185,13 @@ footer a {
 
 @media (max-width: 750px) {
   :root {
-    --fixed-header-height: 170px;
+    --fixed-header-height: 185px;
   }
   #header-img {
     display: block;
     height: 50px;
     margin: 0 auto;
+    margin-top: 10px;
   }
   nav {
     display: block;
@@ -158,6 +205,9 @@ footer a {
     font-size: 1rem;
     padding: 5px;
   }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -165,10 +215,13 @@ footer a {
     flex-direction: column;
     text-align: center;
   }
-  .circle-wrapper {
+  .user-testimonial {
     width: 90vw;
-    height: 90vw;
     margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .circle-wrapper {
+    height: 90vw;
   }
 }
 
